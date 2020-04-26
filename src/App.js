@@ -1,30 +1,30 @@
 import React,{Component} from 'react';
 
-import Header from './Components/Header/Header';
-import Footer from './Components/Footer/Footer';
-import Product from './Components/Products/Product/Product';
-import CartMessage from './Components/Products/CartMessage/CartMessage';
-import Cart from './Components/Products/Cart/Cart'
+import Header from './Components/Header';
+import Products from './Components/Products';
+import Message from './Components/Message';
+import Cart from './Components/Cart';
+import Footer from './Components/Footer';
 
 class App extends Component {
   render(){
     return (
-      <div>
-        {/* Header */}
-        <Header/>
-        <main id="mainContainer">
-          <div className="container">
-          {/* Products */}
-          <Product/>
-          {/* Message */}
-          <CartMessage/>
-          {/* Cart */}
-          <Cart/>
-          </div>
-        </main>
-        {/* Footer */}
-        <Footer/>
-      </div>
+        <div>
+          {/* Header */}
+          <Header/>
+          <main id="mainContainer">
+            <div className="container">
+              {/* Products */}
+              <Products/>
+              {/* Message */}
+              <Message/>
+              {/* Cart */}
+              <Cart/>
+            </div>
+          </main>
+          {/* Footer */}
+          <Footer/>
+        </div>
     );
   }
 }
