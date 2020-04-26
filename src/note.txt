@@ -1,0 +1,10 @@
+redux 
+    1. reducers
+        3. index.js
+        4. product.js
+    2. action 
+    3. constant
+        1. ActionType.js
+        2. Message.js
+    4. containers
+    5. store
