@@ -6,7 +6,7 @@ const InitialState = data ? data : [];
 
 const cart = (state = InitialState, action) => {
     let {product, quantity} = action;
-    let index = -1;
+    let index = -1; //khong tim thay =-1 
     switch (action.type) {
         case Types.ADD_TO_CART:
             index = findProductInCart(state, product);
@@ -17,6 +17,13 @@ const cart = (state = InitialState, action) => {
                     product,
                     quantity
                 });
+            }
+            localStorage.setItem('CART', JSON.stringify(state));
+            return [...state];
+        case Types.DELETE_PRODUCT_IN_CART:
+            index = findProductInCart(state, product);
+            if(index != -1){
+                state.splice(index, 1);
             }
             localStorage.setItem('CART', JSON.stringify(state));
             return [...state];
