@@ -11,7 +11,7 @@ class CartItem extends Component {
     return (
       <tr>
         <th scope="row">
-          <img src={item.product.image} />
+          <img src={item.product.image} alt={item.product.name}/>
         </th>
         <td>
           <h5>
